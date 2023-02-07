@@ -3,7 +3,7 @@ import openai
 import streamlit as st
 
 # Set up OpenAI API key
-openai.api_key =  os.environ.get('OPENAI_API_KEY_babyname')
+openai.api_key =  'OPENAI_API_KEY_babyname'
 
 def generate_names(model, parents_names, birth_date, language):
     completions = openai.Completion.create(
