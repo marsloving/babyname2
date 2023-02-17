@@ -3,11 +3,10 @@ import openai
 import streamlit as st
 
 # Set up OpenAI API key
-print("a",OPENAI_API_KEY_babyname)
+print("a",st.secrets["OPENAI_API_KEY_babyname"])
 if  "OPENAI_API_KEY_babyname" in locals().keys(): #判断本地是否有定义
-    openai.api_key = OPENAI_API_KEY_babyname
+    openai.api_key = st.secrets["OPENAI_API_KEY_babyname"]
 
-print(openai.api_key)
 # else:
 #     import setting                               #无则读取本地环境
 #     openai.api_key = setting.get_key()
